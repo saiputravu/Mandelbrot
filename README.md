@@ -4,4 +4,5 @@ Me exploring mandelbrot styled fractals. I have made a mandelbrot generator in p
 
 ## Compile main.c
 ```bash
-gcc main.c -lpng -lm -o main```
+gcc main.c -lpng -lm -o main
+```
