@@ -8,4 +8,5 @@ gcc main.c -lpng -lm -o main
 ./main
 ```
 
+## Output 5000x5000 image
 ![C output](./output.png)
