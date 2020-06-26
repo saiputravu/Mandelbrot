@@ -6,4 +6,5 @@ Me exploring mandelbrot styled fractals. I have made a mandelbrot generator in p
 ```bash
 gcc main.c -lpng -lm -o main
 ```
-[output.png]
+
+[](./output.png)
