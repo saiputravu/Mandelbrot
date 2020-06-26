@@ -2,10 +2,10 @@
 
 Me exploring mandelbrot styled fractals. I have made a mandelbrot generator in python and C, using libpng to display the images.
 
-## Compile and run main.c
+## Compile and run mandelbrot.c
 ```bash
-gcc main.c -lpng -lm -o main
-./main
+gcc mandelbrot.c -lpng -lm -o mandelbrot
+./mandelbrot
 ```
 
 ## Output 5000x5000 image
