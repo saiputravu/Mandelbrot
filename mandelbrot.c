@@ -4,11 +4,13 @@
 #include <omp.h>
 #include <math.h>
 
-#define MAX_ITERATIONS 150
+#define MAX_ITERATIONS 200
 #define REAL_MIN -2
 #define REAL_MAX  1
 #define IMAGINARY_MIN -1
 #define IMAGINARY_MAX  1
+#define LOWER_WAVELENGTH 400
+#define UPPER_WAVELENGTH 700
 
 typedef struct {
 	char red;
@@ -176,7 +178,7 @@ void mandelbrot (image_t* image) {
 			c.real = map_range(x, 0, image->width, REAL_MIN, REAL_MAX);	
 			c.imaginary = map_range(y, 0, image->height, IMAGINARY_MIN, IMAGINARY_MAX);	
 			n = mandelbrot_iterations(&c);
-			l = map_range(n, 0, MAX_ITERATIONS, 400, 700);
+			l = map_range(n, 0, MAX_ITERATIONS, LOWER_WAVELENGTH, UPPER_WAVELENGTH);
 			spectral_color(l, image, x, y);
 		}
 	}
@@ -185,8 +187,8 @@ void mandelbrot (image_t* image) {
 int main (){
 	int status = -1;
 	image_t image;	
-	image.width = 3000;
-	image.height = 3000;
+	image.width = 5000;
+	image.height = 5000;
 	image.pixel_buff = calloc(image.width * image.height, sizeof(pixel_t));
 	if (!image.pixel_buff) {
 		fprintf(stderr, "Failed allocating the image buffer.\n");
