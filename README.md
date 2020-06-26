@@ -1,6 +1,6 @@
 # Mandelbrot
 
-Me exploring mandelbrot styled fractals. I have made a mandelbrot generator in python, I will aim do one in C as well.
+Me exploring mandelbrot styled fractals. I have made a mandelbrot generator in python and C, using libpng to display the images.
 
 ## Compile and run main.c
 ```bash
