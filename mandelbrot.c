@@ -192,7 +192,7 @@ int main (){
 	image.pixel_buff = calloc(image.width * image.height, sizeof(pixel_t));
 	if (!image.pixel_buff) {
 		fprintf(stderr, "Failed allocating the image buffer.\n");
-		exit(-1);
+		return status;
 	}
 
 	printf("Generating mandelbrot image\n");
@@ -200,7 +200,7 @@ int main (){
 	
 	if (write_png(&image, "output.png")) {
 		fprintf (stderr, "Error writing file.\n");
-		exit(-1);
+		return status;
 	}
 
 	free(image.pixel_buff);
